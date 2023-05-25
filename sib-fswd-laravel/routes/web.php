@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\KategoriModelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +25,9 @@ Route::controller(UserController::class)->group(function () {
     Route::resource('user',UserController::class);
 
 });
+Route::get('template.base',[HomeController:: class,'index']);
+Route::get('landing.base',[HomeController:: class,'showTemplate']);
+
+
+Route::resource('kategori',KategoriModelController::class);
+Route::resource('produk',ProdukController::class);
