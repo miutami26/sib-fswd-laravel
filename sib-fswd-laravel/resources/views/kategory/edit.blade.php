@@ -7,17 +7,17 @@
                 <div class="card mt-4">
                     <div class="card-header">
                         Edit Data Kategory
-                        <form action="{{ url('kategori', $kategori->id) }}" method="post">
+                        <form action="{{ url('kategory', $kategory->id) }}" method="post">
                             @csrf
                             @method('PUT')
                     </div>
                     <div class="card-body">
                         <div class="form-group">
                             <label class="control-label" for="">Nama</label>
-                            <input type="text" name="name" class="form-control" value="{{ $kategori->name }}">
+                            <input type="text" name="name" class="form-control" value="{{ $kategory->name }}">
                         </div>
                         <button class="btn btn-dark float-right"><i class="fa fa-save"> simpan</i></button>
-                        <a href="{{ url('kategori') }}" class="btn btn-secondary">Batal</a>
+                        <a href="{{ url('kategory') }}" class="btn btn-secondary">Batal</a>
                     </div>
 
                     </form>

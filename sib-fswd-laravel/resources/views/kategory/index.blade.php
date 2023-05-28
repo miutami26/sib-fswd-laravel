@@ -8,7 +8,7 @@
                 <div class="card mt-4">
                     <div class="card-header">
                         Data Kategory
-                        <a href="{{ url('kategori/create') }}" class="btn btn-dark float-right"><i class="fa fa-plus"> Tambah
+                        <a href="{{ url('kategory/create') }}" class="btn btn-dark float-right"><i class="fa fa-plus"> Tambah
                                 Data</i></a>
                     </div>
                     <div class="card-body">
@@ -22,18 +22,18 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($list_kategori as $kategori)
+                                @foreach ($list_kategory as $kategory)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $kategori->name }}</td>
+                                        <td>{{ $kategory->name }}</td>
                                         <td>
                                             <div class="btn-group">
-                                                <a href="{{ url('kategori', $kategori->id) }}" class="btn btn-dark"><i
+                                                <a href="{{ url('kategory', $kategory->id) }}" class="btn btn-dark"><i
                                                         class="fa fa-info"></i></a>
-                                                <a href="{{ url('kategori', $kategori->id) }}/edit"
+                                                <a href="{{ url('kategory', $kategory->id) }}/edit"
                                                     class="btn btn-warning"><i class="fa fa-edit"></i></a>
                                                 @include('template.utils.delete', [
-                                                    'url' => url('kategori', $kategori->id),
+                                                    'url' => url('kategory', $kategory->id),
                                                 ])
                                             </div>
 

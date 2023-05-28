@@ -7,7 +7,7 @@
                 <div class="card mt-4">
                     <div class="card-header">
                         Tambah Data Kategori
-                        <form action="{{ url('kategori') }}" method="post">
+                        <form action="{{ url('kategory') }}" method="post">
                             @csrf
                     </div>
                     <div class="card-body ">
@@ -19,7 +19,7 @@
                         </div>
                         <div class=" float-right form-group mt-2"><button type="submit"
                                 class="btn btn-primary">Simpan</button>
-                            <a href="{{ url('kategori') }}" class="btn btn-secondary">Batal</a>
+                            <a href="{{ url('kategory') }}" class="btn btn-secondary">Batal</a>
                         </div>
                     </div>
 

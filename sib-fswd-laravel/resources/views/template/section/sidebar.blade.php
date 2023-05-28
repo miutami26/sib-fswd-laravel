@@ -27,10 +27,16 @@
                  <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                  <li class="nav-item menu-open">
-                     <a href="#" class="nav-link ">
+                     <a href="{{ url('dashboard') }}" class="nav-link ">
                          <i class="nav-icon fas fa-tachometer-alt"></i>
                          <p>
                              Dashboard
+                         </p>
+                     </a>
+                     <a href="{{ url('slider') }}" class="nav-link ">
+                         <i class="nav-icon fas fa-tachometer-alt"></i>
+                         <p>
+                             Slider
                          </p>
                      </a>
                  </li>
@@ -44,13 +50,13 @@
                      </a>
                      <ul class="nav nav-treeview">
                          <li class="nav-item">
-                             <a href="{{ url('kategori') }}" class="nav-link">
+                             <a href="{{ url('kategory') }}" class="nav-link">
                                  <i class="far fa-circle nav-icon"></i>
                                  <p>Kategori</p>
                              </a>
                          </li>
                          <li class="nav-item">
-                             <a href="{{ url('produk') }}" class="nav-link">
+                             <a href="{{ url('daftarproduk') }}" class="nav-link">
                                  <i class="far fa-circle nav-icon"></i>
                                  <p>Daftar Produk</p>
                              </a>
@@ -67,7 +73,7 @@
                      </a>
                      <ul class="nav nav-treeview">
                          <li class="nav-item">
-                             <a href="pages/charts/chartjs.html" class="nav-link">
+                             <a href="{{ url('group') }}" class="nav-link">
                                  <i class="far fa-circle nav-icon"></i>
                                  <p>Grup Pengguna</p>
                              </a>
@@ -75,7 +81,7 @@
                      </ul>
                      <ul class="nav nav-treeview">
                          <li class="nav-item">
-                             <a href="{{ url('user') }}" class="nav-link">
+                             <a href="{{ url('pengguna') }}" class="nav-link">
                                  <i class="far fa-circle nav-icon"></i>
                                  <p>Daftar Pengguna</p>
                              </a>

@@ -7,8 +7,8 @@
             <div class="col-md-12">
                 <div class="card mt-4">
                     <div class="card-header">
-                        Data Kategory
-                        <a href="{{ url('kategori/create') }}" class="btn btn-dark float-right"><i class="fa fa-plus"> Tambah
+                        Data Group
+                        <a href="{{ url('group/create') }}" class="btn btn-dark float-right"><i class="fa fa-plus"> Tambah
                                 Data</i></a>
                     </div>
                     <div class="card-body">
@@ -17,23 +17,25 @@
                                 <tr>
                                     <th width="50px">No</th>
                                     <th>Nama</th>
+                                    <th>Role</th>
                                     <th>Aksi</th>
-
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($list_kategori as $kategori)
+                                @foreach ($list_group as $group)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $kategori->name }}</td>
+                                        <td>{{ $group->nama }}</td>
+                                        <td>{{ $group->role }}</td>
+
                                         <td>
                                             <div class="btn-group">
-                                                <a href="{{ url('kategori', $kategori->id) }}" class="btn btn-dark"><i
+                                                <a href="{{ url('group', $group->id) }}" class="btn btn-dark"><i
                                                         class="fa fa-info"></i></a>
-                                                <a href="{{ url('kategori', $kategori->id) }}/edit"
-                                                    class="btn btn-warning"><i class="fa fa-edit"></i></a>
+                                                <a href="{{ url('group', $group->id) }}/edit" class="btn btn-warning"><i
+                                                        class="fa fa-edit"></i></a>
                                                 @include('template.utils.delete', [
-                                                    'url' => url('kategori', $kategori->id),
+                                                    'url' => url('group', $group->id),
                                                 ])
                                             </div>
 
